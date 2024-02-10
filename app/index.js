@@ -1,12 +1,12 @@
+import { Text, View } from '@/Components/Themes';
 import { Link } from 'expo-router';
-import { Pressable, Text, View } from 'react-native';
+import { Pressable } from 'react-native';
 
 //Main Index/Landing Page. Opens on load
 
 export default function Page() {
     return (
         <View>
-            <Text>Base Landing Page</Text>
             <Link href="/automotive" asChild>
                 <Pressable>
                     <Text>Automotive</Text>
@@ -22,7 +22,7 @@ export default function Page() {
                     <Text>Home</Text>
                 </Pressable>
             </Link>
-            <Link href="settings" asChild>
+            <Link href="/settings" asChild>
                 <Pressable>
                     <Text>Settings</Text>
                 </Pressable>
