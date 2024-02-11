@@ -1,5 +1,6 @@
+import { Stack } from 'expo-router';
 import { ScrollView, StyleSheet, useColorScheme, View } from 'react-native';
-import MainPageCard from '../Components/MainPageCards';
+import StepCards from '../../Components/StepCards';
 
 
 //Main Index/Landing Page. Opens on load
@@ -9,15 +10,16 @@ export default function Page() {
     const containerColors = colorScheme === 'light' ? styles.containerLight : styles.containerDark;
 
     return (
+
         <View style={[styles.container, containerColors]}>
+            <Stack.Screen
+                options={{
+                    title: 'Task 1',
+                }}
+            />
             <ScrollView style={styles.scroller}>
                 <View style={styles.cardHolder}>
-                    <MainPageCard link="/house" title="House" />
-                    <MainPageCard link="/automotive" title="Automotive" />
-                    <MainPageCard link="/health" title="Health" />
-                    <MainPageCard link="/house" title="Temp 1" />
-                    <MainPageCard link="/house" title="Temp 2" />
-                    <MainPageCard link="/house" title="Temp 3" />
+                    <StepCards title="Step 1:" mainText="Blah blah blah" imageSource="image.png" />
                 </View>
             </ScrollView>
         </View>
@@ -29,7 +31,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
-    containerLight:{
+    containerLight: {
         backgroundColor: '#fff',
     },
     containerDark: {
@@ -63,7 +65,7 @@ const styles = StyleSheet.create({
         //end of shadow
 
     },
-    cardTitle:{
+    cardTitle: {
         left: 10,
         top: 10,
         fontSize: 18,

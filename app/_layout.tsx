@@ -13,6 +13,7 @@ import { Pressable, useColorScheme } from "react-native";
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  //Need to keep
   const [loaded, error] = useFonts({
     ...FontAwesome.font,
   });
@@ -45,51 +46,27 @@ function RootLayoutNav() {
         <Stack.Screen
           name="index"
           options={{
-            title: "Emergency Help",
-            headerRight: () => (
-                <Link href="/settings/" asChild>
-                  <Pressable>
-                    {({ pressed }) => (
-                      <Ionicons
-                        name="settings-sharp"
-                        size={25}
-                        color={Colors[colorScheme ?? "light"].text}
-                        style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                      />
-                    )}
-                  </Pressable>
-                </Link>
-              ),
-          }}
-        />
-        {/* Automotive Landing Page */}
-        <Stack.Screen
-          name="automotive/index"
-          options={{
-            title: "Automotive",
-          }}
-        />
-        {/* Health Landing Page */}
-        <Stack.Screen
-          name="health/index"
-          options={{
-            title: "Health",
-          }}
-        />
-        {/* Home Landing Page */}
-        <Stack.Screen
-          name="home/index"
-          options={{
             title: "Home",
+            headerRight: () => (
+              <Link href="/settings/" asChild>
+                <Pressable>
+                  {({ pressed }) => (
+                    <Ionicons
+                      name="settings-sharp"
+                      size={25}
+                      color={Colors[colorScheme ?? "light"].text}
+                      style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                    />
+                  )}
+                </Pressable>
+              </Link>
+            ),
           }}
         />
-        {/* Setting Landing Page */}
-        <Stack.Screen
-          name="settings/index"
-          options={{
-            title: "Settings",
-          }}
-        />
+        {/* 
+            All Other Screen Options are on indiviual index pages,
+            more commented out options in house/index
+        */}
       </Stack>
     </ThemeProvider>
   );
