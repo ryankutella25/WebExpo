@@ -17,8 +17,7 @@ const UniversalStyles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: 'red',
         height: 50,
-        alignContent: 'center',
-        textAlignVertical: 'center'
+        alignItems: 'center',
     },
     leftHeader: {
         flex: 2,
@@ -33,6 +32,9 @@ const UniversalStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         backgroundColor: 'blue'
+    },
+    tabTitles:{
+        flex: 1,
     },
     rightHeader: {
         flex: 2,

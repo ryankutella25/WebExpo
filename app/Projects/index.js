@@ -13,12 +13,7 @@ export default function Page() {
     <View style={[styles.container, containerColors]}>
       <Stack.Screen
         options={{
-          title: "Projects",
-          // headerStyle: { backgroundColor: '#f4511e' },
-          // headerTintColor: '#fff',
-          // headerTitleStyle: {
-          //     fontWeight: 'bold',
-          // },
+          title: "Projects"
         }}
       />
       <ScrollView style={styles.scroller}>
